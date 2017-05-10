@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EDA Phase 1 Express Boilerplate</title>
+    <title>Gender-neutralise</title>
   </head>
   <body>
-    <ul>
-    {{#each users}}
-      <li>{{name}} ({{email}})</li>
-    {{/each}}
-    </ul>
+    <form class="search-box" action="/" method="post">
+      <input type="text" name="word" placeholder="Enter your word">
+      <input type="submit" value="Let's neutralise it!">
+    </form>
   </body>
 </html>
