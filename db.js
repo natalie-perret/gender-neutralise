@@ -1,13 +1,12 @@
 
 module.exports = {
-  getUser: getUser,
-  getUsers: getUsers
+  getBias: getBias
 }
 
-function getUsers (connection) {
-  return connection('users').select()
+function getBias (connection) {
+  return connection('words').select()
 }
 
-function getUser (id, connection) {
-  return connection('users').where('id', id)
-}
+// function showNeutral (id, connection) {
+//   return connection('words').where('id', id)
+// }
