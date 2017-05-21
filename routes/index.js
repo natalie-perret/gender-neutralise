@@ -17,4 +17,13 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/', (req,res) => {
+  req.app.get('db')('connection')
+  .insert('name', req.body)
+  .then((words) => {
+    res.redirect('/', words)
+  })
+})
+
+
 module.exports = router

@@ -1,3 +1,7 @@
 body {
-  background-color: red;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/34/11/da/3411da065a4c22e23629ca413fadd6e8.jpg");
+}
+
+.search-box {
+  color: red;
 }
