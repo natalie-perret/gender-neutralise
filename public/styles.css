@@ -3,5 +3,6 @@ body {
 }
 
 .search-box {
-  color: red;
+  color: black;
+  padding: 20px;
 }

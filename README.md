@@ -3,7 +3,7 @@ Gender-neutralise app: let's make the world a fairer and gender neutral place fo
 User stories
 * check whether a word is gender neutral
 * if it isn't, return me the gender neutral equivalent of the gender-biased word I entered
-* add some notes, if necessary, or even a 'did you know' tidbit about the word or its use
+* add some notes, if necessary, or even a 'did you know'  about the word or its use
 * be able to look up all words beginning with a letter of the alphabet and see their gender neutral equivalent(s)
 * can't find the word you're looking for, add one yourself
 * update search results with new information ie a new gender neutral term that's being commonly used
