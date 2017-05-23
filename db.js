@@ -3,6 +3,9 @@ module.exports = {
   getBias: getBias
 }
 
-function getBias (id, connection) {
-  return connection('words').where('id', id)
+function getBias (bias, connection) {
+  console.log(bias)
+  return connection('words')
+    .where('bias', bias)
+    .first()
 }
