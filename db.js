@@ -4,8 +4,8 @@ module.exports = {
 }
 
 function getBias (bias, connection) {
-  console.log(bias)
   return connection('words')
     .where('bias', bias)
+    .select('bias', 'neutral', 'notes')
     .first()
 }

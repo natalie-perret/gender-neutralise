@@ -1,7 +1,16 @@
 <div class=container>
-  <form class="search-box" action="/bias" method="get">
-    <input type="text" name="bias" placeholder="Enter your word">
-    <input type="submit" value="Let's neutralise it!">
-  </form>
-  <p>{{bias}}</p>
+
+  <div class="search-result">
+    <p id="neutral">{{word.neutral}}</p>
+    <p id="bias">{{word.bias}}</p>
+    <p id="notes">{{word.notes}}</p>
+  </div>
+
+  <div class="form">
+    <form class="search-box" action="/bias" method="get">
+      <input type="text" name="bias" placeholder="Enter your word">
+      <input type="submit" value="Let's neutralise it!">
+    </form>
+  </div>
+
 <div>
