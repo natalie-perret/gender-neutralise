@@ -48,3 +48,15 @@ input[type=text] {
   cursor: pointer;
   height: 75px;
 }*/
+
+.dictionary {
+  padding: 15px;
+}
+
+.add-word {
+  padding: 15px;
+}
+
+.add-form {
+  padding: 15px;
+}

@@ -6,10 +6,31 @@
     <p id="notes">{{word.notes}}</p>
   </div>
 
-  <div class="form">
+  <div class="search-form">
     <form class="search-box" action="/bias" method="get">
       <input type="text" name="bias" placeholder="Enter your word">
       <input type="submit" value="Let's neutralise it!">
+    </form>
+  </div>
+
+  <div class="dictionary">
+    <p>Don't have a specific word in mind but want to see how gender-biased our world is?</p>
+    <p><a href="#">Gender-Dictionary</a></p>
+  </div>
+
+  <div class="add-word">
+    <p>Can't find your word? Add it to the dictionary:</p>
+    <p><a href="#">Add a word</a></p>
+  </div>
+
+  <!-- form only to be visible if click on 'Add a word' -->
+  <div class="add-form">
+    <h4>Add a new word to the dictionary:</h4>
+    <form class="add-word-form" action="/add" method="post">
+      <input type="text" name="bias" placeholder="Enter a biased word"> <br>
+      <input type="text" name="neutral" placeholder="Enter gender-neutral equivalent"> <br>
+      <input type="text" name="notes" placeholder="Any other info"> <br>
+      <input type="submit" value="Add your word to the dictionary!">
     </form>
   </div>
 
