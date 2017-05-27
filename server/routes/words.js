@@ -11,10 +11,12 @@ router.get('/', function (req, res) {
   })
 })
 
-router.post('/', function (req, res) {
-  db.saveWord(req.body)
-  res.sendStatus(200)
-})
+router.post('/add', function (req, res) {
+  db.appendWord(req.app.get('knex')).insert(req.body)
+    .then((result) => {
+      res.sendStatus(201)
+    })
+  })
 
 router.get('/bias', (req, res) => {
   db.getBias(req.query.bias, req.app.get('knex'))

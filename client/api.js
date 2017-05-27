@@ -22,7 +22,7 @@ function getWords (callback) {
 
 function appendWord (word, callback) {
   request
-    .post(wordUrl)
+    .post('/books/add')
     .send(word)
     .end(function (err, res) {
       if (err) {
