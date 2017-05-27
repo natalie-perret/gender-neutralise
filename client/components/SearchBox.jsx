@@ -23,9 +23,9 @@ export default class SearchBox extends React.Component {
   render() {
     return (
       <div className="search-form">
-        <form className="search-box" action="/bias" method="get" onSubmit={this.handleSubmit.bind(this)}>
-          <p><input type="text" name='bias' placeholder='Enter your word' value={this.state.bias} onChange={this.handleChange.bind(this)} /></p>
-          <p><input type='submit' value='Neutralise!' /></p>
+        <form className="search-box-wrapper" action="/bias" method="get" onSubmit={this.handleSubmit.bind(this)}>
+          <input type="text" name='bias' placeholder='Enter your word' className="search-box-input" value={this.state.bias} onChange={this.handleChange.bind(this)} />
+          <input type='submit' value='Neutralise!' className="search-box-button"/>
         </form>
       </div>
     )
