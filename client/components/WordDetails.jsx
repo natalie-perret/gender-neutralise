@@ -6,10 +6,9 @@ export default (props) => {
   const classes = "word-details " + isVisible ? 'visible' : 'hidden'
   return (
     <div className={classes}>
-      <h2>Details</h2>
-      <p>Bias: {word.bias}</p>
-      <p>Neutral: {word.neutral}</p>
-      <p>Notes: {word.notes}</p>
+      <p id="neutral">{word.neutral}</p>
+      <p id="bias">{word.bias}</p>
+      <p id="notes">{word.notes}</p>
       <a href="#" onClick={hide}>Close</a>
     </div>
   )

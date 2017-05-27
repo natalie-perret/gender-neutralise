@@ -21,15 +21,13 @@ export default class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    api.getWords((err, words) => this.ListAllWords(err, words))
-  }
 
   ListAllWords (err, words) {
     this.setState({
       error: err,
       words: words || []
     })
+    api.getWords((err, words) => this.ListAllWords(err, words))
   }
 
   refreshList (err) {
