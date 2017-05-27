@@ -1,5 +1,45 @@
 body {
-  margin: auto;
-  padding: auto;
   background-image: url("https://s-media-cache-ak0.pinimg.com/736x/34/11/da/3411da065a4c22e23629ca413fadd6e8.jpg");
 }
+
+
+#app {
+  padding-top: 50px;
+  text-align: center;
+  }
+
+  #neutral {
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  #bias {
+    font-size: 25px;
+    font-style: italic;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  #notes {
+    font-size: 25px;
+    padding-bottom: 75px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  /*input[type=text] {
+    align-content: center;
+    margin: 20px;
+    border: white solid 6px;
+    cursor: pointer;
+  }
+
+  input[type=submit] {
+    color: black;
+    border: 20px;
+    cursor: pointer;
+  }*/

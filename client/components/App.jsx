@@ -24,7 +24,10 @@ export default class App extends React.Component {
 
   render () {
     return (
-      <div className="app container">
+      <div className="container">
+        <div>
+          <img src=""/>
+        </div>
         <div className = "row">
 
             {this.state.word && <SearchResult word={this.state.word} />}
