@@ -24,12 +24,14 @@ export default class App extends React.Component {
 
   render () {
     return (
-      <div className="container">
+      <div className="app container">
+        <div className = "row">
 
-        {this.state.word && <SearchResult word={this.state.word} />}
+            {this.state.word && <SearchResult word={this.state.word} />}
 
-        <SearchBox saveCallback={this.getBias.bind(this)}/>
+            <SearchBox saveCallback={this.getBias.bind(this)}/>
 
+        </div>
       </div>
     )
   }
