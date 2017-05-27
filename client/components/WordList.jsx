@@ -10,6 +10,7 @@ export default (props) => {
         word={word}
         hideDetails={props.hideDetails}
         showDetails={props.showDetails} />
+
     })}
     </div>
   )

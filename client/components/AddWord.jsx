@@ -39,7 +39,8 @@ export default class AddWord extends React.Component {
             value={this.state.notes}
             onChange={(e) => this.handleChange(e)}
             /></p>
-          <input type='submit' value='submit' />
+          <input type='submit' value='Submit' />
+          <a href='#' onClick={this.props.cancelCallback}>  Cancel</a>
         </form>
       </div>
     )
