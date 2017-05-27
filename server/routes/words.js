@@ -9,12 +9,18 @@ router.get('/', function (req, res) {
   .then((words) => {
     res.json(words)
   })
+  .catch((err) => {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
 })
 
 router.post('/add', function (req, res) {
-  db.appendWord(req.app.get('knex')).insert(req.body)
+  db.addWord(req.body, req.app.get('knex'))
     .then((result) => {
       res.sendStatus(201)
+    })
+    .catch(function (err){
+      res.status(500).send('DATABASE ERROR: ' + err.message)
     })
   })
 

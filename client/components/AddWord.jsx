@@ -12,37 +12,34 @@ export default class AddWord extends React.Component {
     }
   }
 
-  fieldChanged (e) {
-    this.setState({
-      ...this.state,
-      [e.target.name]: e.target.value
-    })
+  handleChange (e) {
+    this.setState({[e.target.name]: e.target.value})
   }
 
-  addWord (e) {
+  handleSubmit (e) {
     e.preventDefault()
-    const word = this.state
-    api.appendWord(word, this.props.finishAdd)
+    api.saveWord(this.state, (err) => {
+      if (!err) console.log("New word added to dictionary")
+    })
   }
 
   render () {
     return (
       <div className="add-word">
-        <form>
-          <p><input placeholder="Enter biased word" name='bias'
-            onChange={e => this.fieldChanged(e)}
+        <form onSubmit={(e) => this.handleSubmit(e)}>
+          <p><input type='text' placeholder="Enter biased word" name='bias'
             value={this.state.bias}
+            onChange={(e) => this.handleChange(e)}
             /></p>
-          <p><input placeholder="Enter gender neutral equivalent" name='neutral'
-            onChange={e => this.fieldChanged(e)}
+          <p><input type='text' placeholder="Enter gender neutral equivalent" name='neutral'
             value={this.state.neutral}
+            onChange={(e) => this.handleChange(e)}
             /></p>
-          <p><input placeholder="Any notes" name='notes'
-            onChange={e => this.fieldChanged(e)}
+          <p><input type='text' placeholder="Any notes" name='notes'
             value={this.state.notes}
+            onChange={(e) => this.handleChange(e)}
             /></p>
-          <button onClick={e => this.addWord(e)}>Add word</button> {' '}
-          <a href="#" onClick={this.props.finishAdd}>Cancel</a>
+          <input type='submit' value='submit' />
         </form>
       </div>
     )

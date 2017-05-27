@@ -1,16 +1,14 @@
 import request from 'superagent'
 
-var wordUrl = '/words'
-
 module.exports = {
-  getWords: getWords,
-  appendWord: appendWord,
-  getBias: getBias
+  getWords,
+  saveWord,
+  getBias
 }
 
 function getWords (callback) {
   request
-    .get(wordUrl)
+    .get('/words')
     .end(function (err, res) {
       if (err) {
         callback(err)
@@ -20,9 +18,9 @@ function getWords (callback) {
     })
 }
 
-function appendWord (word, callback) {
+function saveWord (word, callback) {
   request
-    .post('/books/add')
+    .post('/words/add')
     .send(word)
     .end(function (err, res) {
       if (err) {
@@ -35,7 +33,7 @@ function appendWord (word, callback) {
 
 function getBias (bias, callback) {
   request
-    .get(wordUrl + '/bias?bias=' + bias.bias)
+    .get('/words' + '/bias?bias=' + bias.bias)
     .end(function (err, res) {
       if (err) {
         callback(err)

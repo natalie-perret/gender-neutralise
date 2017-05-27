@@ -1,7 +1,7 @@
 module.exports = {
-  getBias: getBias,
-  getWords: getWords,
-  appendWord: appendWord
+  getBias,
+  getWords,
+  addWord
 }
 
 function getWords(connection) {
@@ -15,6 +15,6 @@ function getBias (bias, connection){
     .first()
 }
 
-function appendWord(word, connection) {
+function addWord(word, connection) {
   return connection('words').insert(word)
 }
