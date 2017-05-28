@@ -1,56 +1,68 @@
 body {
   background-image: url("https://s-media-cache-ak0.pinimg.com/736x/34/11/da/3411da065a4c22e23629ca413fadd6e8.jpg");
-  display: flex;
+  font-family: ;
 }
-
 
 #app {
   padding-top: 50px;
   text-align: center;
-  }
+}
 
-  #neutral {
-    font-size: 50px;
-    font-weight: bold;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+#neutral {
+  font-size: 35px;
+  font-weight: bold;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
-  #bias {
-    font-size: 25px;
-    font-style: italic;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+#bias {
+  font-size: 20px;
+  font-style: italic;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
-  #notes {
-    font-size: 25px;
-    padding-bottom: 75px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+#notes {
+  font-size: 20px;
+  padding-bottom: 75px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
 .search-form {
-
+    padding: 15px 0px 50px 0px;
 }
 
 .search-result {
-
-}
-
-.word-list {
-  background-color: white;
-}
-
-.word-list-item {
-
 }
 
 .add-word {
+  padding-top: 25px;
+}
+
+.word-list {
+}
+
+.close-button {
 
 }
+
+.row-3 {
+  padding-top: 50px;
+}
+
+.row-4 {
+  padding-top: 50px;
+}
+
+.flex-grid {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+}
+
 
 /*.search-box-wrapper {
     display: inline-flex;
