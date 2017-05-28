@@ -1,6 +1,13 @@
 body {
   background-image: url("https://s-media-cache-ak0.pinimg.com/736x/34/11/da/3411da065a4c22e23629ca413fadd6e8.jpg");
-  font-family: ;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+.title {
+  font-family: 'Baloo', cursive;
+  font-size: 45px;
+  color: grey;
 }
 
 #app {

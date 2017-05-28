@@ -25379,6 +25379,8 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactRouterDom = __webpack_require__(183);
+	
 	var _api = __webpack_require__(224);
 	
 	var api = _interopRequireWildcard(_api);
@@ -25508,26 +25510,26 @@
 	
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'container' },
+	        null,
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row-2' },
+	            this.state.detailsVisible && _react2.default.createElement(_WordDetails2.default, {
+	              isVisible: this.state.detailsVisible,
+	              hideDetails: function hideDetails() {
+	                return _this5.hideDetails();
+	              },
+	              word: this.state.activeWord })
+	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'test-1 ' },
 	            this.state.word && _react2.default.createElement(_SearchResult2.default, { word: this.state.word }),
 	            _react2.default.createElement(_SearchBox2.default, { saveCallback: this.getBias.bind(this) })
 	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'row-2' },
-	          this.state.detailsVisible && _react2.default.createElement(_WordDetails2.default, {
-	            isVisible: this.state.detailsVisible,
-	            hideDetails: function hideDetails() {
-	              return _this5.hideDetails();
-	            },
-	            word: this.state.activeWord })
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -27287,6 +27289,16 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'search-form' },
+	        _react2.default.createElement(
+	          'h1',
+	          { className: 'title' },
+	          'gender.neutralise'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Looking for the gender neutral equivalent of a gender-biased term? Search here:'
+	        ),
 	        _react2.default.createElement(
 	          'form',
 	          { className: 'search-box-wrapper', action: '/bias', method: 'get', onSubmit: this.handleSubmit.bind(this) },

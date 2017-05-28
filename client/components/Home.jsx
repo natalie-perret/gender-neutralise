@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import * as api from '../api'
 
@@ -76,20 +77,20 @@ export default class App extends React.Component {
 
   render () {
     return (
-      <div className="container">
+      <div>
         <div className="row">
+          <div className="row-2">
+            {this.state.detailsVisible && <WordDetails
+              isVisible={this.state.detailsVisible}
+              hideDetails={() => this.hideDetails()}
+              word={this.state.activeWord} />}
+            </div>
           <div className="test-1 ">
             {this.state.word && <SearchResult word={this.state.word} />}
             <SearchBox saveCallback={this.getBias.bind(this)}/>
           </div>
         </div>
 
-        <div className="row-2">
-          {this.state.detailsVisible && <WordDetails
-            isVisible={this.state.detailsVisible}
-            hideDetails={() => this.hideDetails()}
-            word={this.state.activeWord} />}
-        </div>
 
         <div className="row-3">
           <p>Don't have a specific word in mind? Check out the list of words below:</p>
