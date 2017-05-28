@@ -10,7 +10,7 @@ body {
 }
 
 #neutral {
-  font-size: 50px;
+  font-size: 35px;
   font-weight: bold;
   padding-bottom: 15px;
   padding-left: 25px;
@@ -18,7 +18,7 @@ body {
 }
 
 #bias {
-  font-size: 25px;
+  font-size: 20px;
   font-style: italic;
   padding-bottom: 15px;
   padding-left: 25px;
@@ -26,36 +26,39 @@ body {
 }
 
 #notes {
-  font-size: 25px;
+  font-size: 20px;
   padding-bottom: 75px;
   padding-left: 25px;
   padding-right: 25px;
 }
 
 .search-form {
+    background-color: white;
+    padding: 15px 0px 50px 0px;
 
 }
 
 .search-result {
-
+  background-color: white;
 }
 
 .word-list {
-  /*background: rgba(255, 255, 255, 0.5);*/
+  background-color: green;
 }
 
 .flex-grid {
   -webkit-column-count: 4; /* Chrome, Safari, Opera */
   -moz-column-count: 4; /* Firefox */
   column-count: 4;
+  background-color: white;
 }
 
 .word-list-item {
-
+  background-color: red;
 }
 
 .add-word {
-
+  background-color: white;
 }
 
 /*.search-box-wrapper {
