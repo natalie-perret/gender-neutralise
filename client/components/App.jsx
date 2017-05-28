@@ -1,39 +1,22 @@
 import React from 'react'
+import {HashRouter as Router, Route} from 'react-router-dom'
 
-import * as api from '../api'
-import SearchBox from './SearchBox'
-import SearchResult from './SearchResult'
-
+import Home from "./Home"
 
 export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      error: null,
-      word: null
     }
-  }
-
-  getBias(bias) {
-    api.getBias(bias, (err, word) => {
-      this.setState({
-        word: word
-      })
-    })
   }
 
   render () {
     return (
-      <div className="app container">
-        <div className = "row">
-
-            {this.state.word && <SearchResult word={this.state.word} />}
-
-            <SearchBox saveCallback={this.getBias.bind(this)}/>
-
+      <Router>
+        <div className="container">
+          <Route exact path='/' component={Home} />
         </div>
-      </div>
+      </Router>
     )
   }
-
 }

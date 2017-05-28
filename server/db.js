@@ -1,5 +1,11 @@
 module.exports = {
-  getBias: getBias
+  getBias,
+  getWords,
+  addWord
+}
+
+function getWords(connection) {
+  return connection('words')
 }
 
 function getBias (bias, connection){
@@ -7,4 +13,8 @@ function getBias (bias, connection){
     .where('bias','=', bias)
     .select('bias', 'neutral', 'notes')
     .first()
+}
+
+function addWord(word, connection) {
+  return connection('words').insert(word)
 }
