@@ -21,7 +21,6 @@ export default class App extends React.Component {
     }
   }
 
-
   ListAllWords (err, words) {
     this.setState({
       error: err,
@@ -78,38 +77,32 @@ export default class App extends React.Component {
   render () {
     return (
       <div className="container">
-        <div>
-          <img src=""/>
-        </div>
         <div className="row">
-          <div>
+          <div className="test-1 ">
             {this.state.word && <SearchResult word={this.state.word} />}
             <SearchBox saveCallback={this.getBias.bind(this)}/>
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-md-12">
-            <p>Don't have a specific word in mind but want to see how gender-biased our world is?</p>
-            <p><a href='#' onClick={(e) => this.ListAllWords(e)}>Gender-Bias Dictionary</a></p>
-          </div>
+        <div className="row-2">
+          {this.state.detailsVisible && <WordDetails
+            isVisible={this.state.detailsVisible}
+            hideDetails={() => this.hideDetails()}
+            word={this.state.activeWord} />}
         </div>
 
-        <div className="row">
-          <div className="col-md-12">
-            <WordList
-              showDetails={(word) => this.showDetails(word)}
-              words={this.state.words} />
-            {this.state.detailsVisible && <WordDetails
-              isVisible={this.state.detailsVisible}
-              hideDetails={() => this.hideDetails()}
-              word={this.state.activeWord} />}
-            </div>
-          </div>
+        <div className="row-3">
+          <p>Don't have a specific word in mind? Check out the list of words below:</p>
+          <p><a href='#' onClick={(e) => this.ListAllWords(e)}>List of gender biased words</a></p>
+          <WordList
+            showDetails={(word) => this.showDetails(word)}
+            words={this.state.words} />
+      </div>
 
-        <div className="row">
+
+        <div className="row-4">
           <div className="col-md-12">
-            <p>Can't find your word? Add it to the dictionary:</p>
+            <p>Can't find your word? Add it to the list:</p>
             <p><a href='#' onClick={(e) => this.showAddWord(e)}>Add a word</a></p>
             {this.state.addWordVisible && <AddWord
               submitCallback={this.addWord.bind(this)}

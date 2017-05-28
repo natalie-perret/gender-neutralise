@@ -1,5 +1,7 @@
 import React from 'react'
 
+import SearchResult from './SearchResult'
+
 export default class SearchBox extends React.Component {
   constructor(props) {
     super(props)

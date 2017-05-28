@@ -3,7 +3,6 @@ body {
   font-family: ;
 }
 
-
 #app {
   padding-top: 50px;
   text-align: center;
@@ -33,33 +32,37 @@ body {
 }
 
 .search-form {
-    background-color: white;
     padding: 15px 0px 50px 0px;
-
 }
 
 .search-result {
-  background-color: white;
-}
-
-.word-list {
-  background-color: green;
-}
-
-.flex-grid {
-  -webkit-column-count: 4; /* Chrome, Safari, Opera */
-  -moz-column-count: 4; /* Firefox */
-  column-count: 4;
-  background-color: white;
-}
-
-.word-list-item {
-  background-color: red;
 }
 
 .add-word {
-  background-color: white;
+  padding-top: 25px;
 }
+
+.word-list {
+}
+
+.close-button {
+
+}
+
+.row-3 {
+  padding-top: 50px;
+}
+
+.row-4 {
+  padding-top: 50px;
+}
+
+.flex-grid {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+}
+
 
 /*.search-box-wrapper {
     display: inline-flex;

@@ -9,7 +9,7 @@ export default (props) => {
       <p id="neutral">{word.neutral}</p>
       <p id="bias">{word.bias}</p>
       <p id="notes">{word.notes}</p>
-      <a href="#" onClick={hide}>Close</a>
+      <a href="#" className="close-button" onClick={hide}>Close</a>
     </div>
   )
 }
