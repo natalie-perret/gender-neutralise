@@ -1,36 +1,36 @@
 body {
   background-image: url("https://s-media-cache-ak0.pinimg.com/736x/34/11/da/3411da065a4c22e23629ca413fadd6e8.jpg");
-  display: flex;
+  font-family: ;
 }
 
 
 #app {
   padding-top: 50px;
   text-align: center;
-  }
+}
 
-  #neutral {
-    font-size: 50px;
-    font-weight: bold;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+#neutral {
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
-  #bias {
-    font-size: 25px;
-    font-style: italic;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+#bias {
+  font-size: 25px;
+  font-style: italic;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
-  #notes {
-    font-size: 25px;
-    padding-bottom: 75px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+#notes {
+  font-size: 25px;
+  padding-bottom: 75px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
 .search-form {
 
@@ -41,7 +41,13 @@ body {
 }
 
 .word-list {
-  background-color: white;
+  /*background: rgba(255, 255, 255, 0.5);*/
+}
+
+.flex-grid {
+  -webkit-column-count: 4; /* Chrome, Safari, Opera */
+  -moz-column-count: 4; /* Firefox */
+  column-count: 4;
 }
 
 .word-list-item {

@@ -3,6 +3,7 @@ import WordListItem from './WordListItem'
 
 export default (props) => {
   return (
+    <div className="flex-grid">
     <div className="word-list">
     {props.words.map((word) => {
       return <WordListItem
@@ -12,6 +13,7 @@ export default (props) => {
         showDetails={props.showDetails} />
 
     })}
+    </div>
     </div>
   )
 }
