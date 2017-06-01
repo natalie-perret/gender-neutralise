@@ -1,8 +1,7 @@
 import React from 'react'
 
-export default (props) => {
-  const {word, isVisible} = props
-  const hide = () => props.hideDetails()
+export default ({word, isVisible, hideDetails}) => {
+  const hide = () => hideDetails()
   const classes = "word-details " + isVisible ? 'visible' : 'hidden'
   return (
     <div className={classes}>
