@@ -27565,12 +27565,13 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = function (props) {
-	  var word = props.word,
-	      isVisible = props.isVisible;
+	exports.default = function (_ref) {
+	  var word = _ref.word,
+	      isVisible = _ref.isVisible,
+	      hideDetails = _ref.hideDetails;
 	
 	  var hide = function hide() {
-	    return props.hideDetails();
+	    return hideDetails();
 	  };
 	  var classes =  true ? 'visible' : 'hidden';
 	  return _react2.default.createElement(
