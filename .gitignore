@@ -1,5 +1,5 @@
 node_modules
 static
 npm-debug.log
-bundle.*
 leaflet
+dev.sqlite3

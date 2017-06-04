@@ -23,7 +23,7 @@
       "stage-0"
     ]
   },
-  "author": "EDA",
+  "author": "NP",
   "license": "ISC",
   "devDependencies": {
     "ava": "^0.19.1",

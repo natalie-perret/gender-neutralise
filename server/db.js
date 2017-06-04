@@ -5,7 +5,7 @@ module.exports = {
 }
 
 function getWords(connection) {
-  return connection('words')
+  return connection('words').select('*')
 }
 
 function getBias (bias, connection){
